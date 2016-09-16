@@ -25,6 +25,8 @@ Also don't forget to change sender mails.
 ## Solving problems with downloading .CSV reports
 I have already described solution [here](https://groups.google.com/d/msg/edx-code/rTI8WO9q4f0/Mi8gmDNZAQAJ). 
 
+## Creating superuser
+[Look here](https://groups.google.com/d/msg/openedx-ops/M5ytgpw57EE/MZs41-yIFAAJ).
 
 ### Updating changes related with assets
 CMS:
