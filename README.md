@@ -60,7 +60,7 @@ tar -zxvf backup.tar.gz
 cd backup
 
 # restoring mysql
-mysql -u root edxapp < backup.sql', dir: 'mysql
+mysql -u root edxapp < backup.sql
 
 # cleaning up mongo db and restoring
 mongo edxapp --eval "db.dropDatabase()"
