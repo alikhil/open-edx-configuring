@@ -41,6 +41,7 @@ cd backup
 
 # backing up mongo db
 mongodump --db edxapp
+mongodump --db cs_comments_service_development
 cd ..
 
 # Packing it to single file for easy copying to second sever
