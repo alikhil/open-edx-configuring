@@ -29,7 +29,8 @@ I have already described solution [here](https://groups.google.com/d/msg/edx-cod
 ### Creating superuser
 [Look here](https://groups.google.com/d/msg/openedx-ops/M5ytgpw57EE/MZs41-yIFAAJ).
 
-### Backuping server and restoring it another machine
+### Backuping server and restoring it on another machine
+Idea is the same as in [BluePlanetLife/openedx-server-prep](https://github.com/BluePlanetLife/openedx-server-prep).
 
 On first machine, where server is running now:
 ```
@@ -66,7 +67,7 @@ mongo edxapp --eval "db.dropDatabase()"
 mongorestore dump/
 
 ```
-That's all!
+That's all! 
 
 ### Updating changes related with assets
 ```
