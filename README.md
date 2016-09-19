@@ -23,28 +23,62 @@ Also don't forget to change sender mails.
 
 [Look here](https://github.com/edx/edx-platform/wiki/Controlling-course-creation-rights).
 
-## Solving problems with downloading .CSV reports
+### Solving problems with downloading .CSV reports
 I have already described solution [here](https://groups.google.com/d/msg/edx-code/rTI8WO9q4f0/Mi8gmDNZAQAJ). 
 
-## Creating superuser
+### Creating superuser
 [Look here](https://groups.google.com/d/msg/openedx-ops/M5ytgpw57EE/MZs41-yIFAAJ).
 
+### Backuping server and restoring it another machine
+
+On first machine, where server is running now:
+```
+mkdir backup
+
+# backing up mysql db
+mysqldump edxapp -u root --single-transaction > backup/backup.sql
+cd backup
+
+# backing up mongo db
+mongodump --db edxapp
+cd ..
+
+# Packing it to single file for easy copying to second sever
+tar -zcvf backup.tar.gz backup/
+```
+
+Now, copy backup.tar.gz to second server. For example using `scp`:
+
+`scp backup.tar.gz root@second-server-ip:~/backup.tar.gz`
+
+And then restore backup on second machine:
+```
+# unpacking
+tar -zxvf backup.tar.gz
+cd backup
+
+# restoring mysql
+mysql -u root edxapp < backup.sql', dir: 'mysql
+
+# cleaning up mongo db and restoring
+mongo edxapp --eval "db.dropDatabase()"
+mongorestore dump/
+
+```
+That's all!
+
 ### Updating changes related with assets
-CMS:
 ```
+# CMS:
 /edx/bin/edxapp-update-assets-cms
-```
-LMS:
-```
+# LMS:
 /edx/bin/edxapp-update-assets-lms
 ```
 
 ### Restarting system
-CMS:
 ```
+# CMS:
 sudo /edx/bin/supervisorctl restart edxapp:
-```
-LMS:
-```
+# LMS:
 sudo /edx/bin/supervisorctl restart edxapp_worker:
 ```
