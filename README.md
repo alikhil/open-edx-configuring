@@ -4,7 +4,8 @@ Here, I am sharing my experience, ways of solving some problems faced in open ed
 I am using [Open edx Eucalyptus.2 on Ubuntu 12.04](https://openedx.atlassian.net/wiki/display/OpenOPS/Native+Open+edX+Ubuntu+12.04+64+bit+Installation), but my things that I describe below may be usefull for other versions/configurations. 
 
 Also usefull links:
-* (Frequently Asked Questions)[https://github.com/edx/edx-platform/wiki/Frequently-Asked-Questions]
+* [Frequently Asked Questions](https://github.com/edx/edx-platform/wiki/Frequently-Asked-Questions)
+* [Tools for Open Edx] (https://github.com/edx/edx-tools/wiki)
 * 
 
 ### First steps to do after installation Open edx
