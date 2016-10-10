@@ -68,7 +68,8 @@ mongorestore dump/
 
 ```
 That's all! 
-
+### Settings
+They stores in `/edx/app/edxapp/` directory.  
 ### Updating changes related with assets
 ```
 # CMS:
