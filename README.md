@@ -6,7 +6,14 @@ I am using [Open edx Eucalyptus.2 on Ubuntu 12.04](https://openedx.atlassian.net
 Also usefull links:
 * [Frequently Asked Questions](https://github.com/edx/edx-platform/wiki/Frequently-Asked-Questions)
 * [Tools for Open Edx] (https://github.com/edx/edx-tools/wiki)
-* 
+
+
+## Overview 
+* [First steps to do after installation Open edx](#first-steps-to-do-after-installation-open-edx)
+* [Configuring sending mails](#configuring-smtp-server-for-sending-mails)
+* [Control course creation rights](#control-course-creation-rights)
+* [Backuping](#backuping-server-and-restoring-it-on-another-machine)
+* [Open edx Insights](#open-edx-insights)
 
 ### First steps to do after installation Open edx
 * Change name of platform
@@ -85,3 +92,6 @@ sudo /edx/bin/supervisorctl restart edxapp:
 # LMS:
 sudo /edx/bin/supervisorctl restart edxapp_worker:
 ```
+
+### Open edx Insights
+Look [here](https://openedx.atlassian.net/wiki/display/OpenOPS/edX+Analytics+Installation).
