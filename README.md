@@ -35,7 +35,21 @@ Also don't forget to change sender mails.
 I have already described solution [here](https://groups.google.com/d/msg/edx-code/rTI8WO9q4f0/Mi8gmDNZAQAJ). 
 
 ### Creating superuser
-[Look here](https://groups.google.com/d/msg/openedx-ops/M5ytgpw57EE/MZs41-yIFAAJ).
+
+```
+cd /edx/app/edxapp/edx-platform
+sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws create_user -s -p edx -e user@example.com
+sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws changepassword user
+sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws shell
+
+
+from django.contrib.auth.models import User
+me = User.objects.get(username="user")
+me.is_superuser = True
+me.is_staff = True
+me.save()
+```
+[Look source here](https://groups.google.com/d/msg/openedx-ops/M5ytgpw57EE/MZs41-yIFAAJ).
 
 ### Backuping server and restoring it on another machine
 Idea is the same as in [BluePlanetLife/openedx-server-prep](https://github.com/BluePlanetLife/openedx-server-prep).
