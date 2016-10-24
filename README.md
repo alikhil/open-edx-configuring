@@ -14,6 +14,7 @@ Also usefull links:
 * [Control course creation rights](#control-course-creation-rights)
 * [Backuping](#backuping-server-and-restoring-it-on-another-machine)
 * [Open edx Insights](#open-edx-insights)
+* [Deleting user account](#deleting-user-account)
 
 ### First steps to do after installation Open edx
 * Change name of platform
@@ -95,3 +96,13 @@ sudo /edx/bin/supervisorctl restart edxapp_worker:
 
 ### Open edx Insights
 Look [here](https://openedx.atlassian.net/wiki/display/OpenOPS/edX+Analytics+Installation).
+
+### Deleting user account
+If you have problem with deleting users through Django admin, try solution below or see [topic in google groups](https://groups.google.com/forum/#!topic/edx-code/4FvQO_pZdrg).
+```
+cd  /edx/app/edxapp/edx-platform
+sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws shell
+>>> from django.contrib.auth.models import User
+>>> u=User.objects.get(email="temp@example.com"); [obj.delete() for obj in u.preferences.all()]; u.delete()
+[None]
+```
