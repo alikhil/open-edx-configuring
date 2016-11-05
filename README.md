@@ -15,6 +15,7 @@ Also usefull links:
 * [Backuping](#backuping-server-and-restoring-it-on-another-machine)
 * [Open edx Insights](#open-edx-insights)
 * [Deleting user account](#deleting-user-account)
+* [Configuring external grader](#configuring-external-grader)
 
 ### First steps to do after installation Open edx
 * Change name of platform
@@ -120,3 +121,8 @@ sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws shell
 >>> u=User.objects.get(email="temp@example.com"); [obj.delete() for obj in u.preferences.all()]; u.delete()
 [None]
 ```
+### Configuring External Grader
+
+* [Topic in google groups](https://groups.google.com/forum/#!msg/edx-code/-xMxjjg6uv8/l-eQimFuDQAJ)
+* [Java grader](https://github.com/huynq55/java-grader)
+* [Stanford-online xqueue pool example](https://github.com/Stanford-Online/xqueue_pull_ref)
