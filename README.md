@@ -6,7 +6,7 @@ I am using [Open edx Eucalyptus.2 on Ubuntu 12.04](https://openedx.atlassian.net
 Also usefull links:
 * [Frequently Asked Questions](https://github.com/edx/edx-platform/wiki/Frequently-Asked-Questions)
 * [Tools for Open Edx] (https://github.com/edx/edx-tools/wiki)
-
+* [Managing OpenEdX Tips and Tricks](https://openedx.atlassian.net/wiki/display/OpenOPS/Managing+OpenEdX+Tips+and+Tricks#ManagingOpenEdXTipsandTricks-UpdatingVersionsusingedXrepos)
 
 ## Overview 
 * [First steps to do after installation Open edx](#first-steps-to-do-after-installation-open-edx)
