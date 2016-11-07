@@ -122,7 +122,8 @@ sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws shell
 [None]
 ```
 ### Configuring External Grader
-
+* [About autograding](https://berkeleyx.berkeley.edu/wiki/autograding)
 * [Topic in google groups](https://groups.google.com/forum/#!msg/edx-code/-xMxjjg6uv8/l-eQimFuDQAJ)
 * [Java grader](https://github.com/huynq55/java-grader)
 * [Stanford-online xqueue pool example](https://github.com/Stanford-Online/xqueue_pull_ref)
+
