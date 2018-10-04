@@ -5,7 +5,7 @@ I am using [Open edx Eucalyptus.2 on Ubuntu 12.04](https://openedx.atlassian.net
 
 Also usefull links:
 * [Frequently Asked Questions](https://github.com/edx/edx-platform/wiki/Frequently-Asked-Questions)
-* [Tools for Open Edx] (https://github.com/edx/edx-tools/wiki)
+* [Tools for Open Edx](https://github.com/edx/edx-tools/wiki)
 * [Managing OpenEdX Tips and Tricks](https://openedx.atlassian.net/wiki/display/OpenOPS/Managing+OpenEdX+Tips+and+Tricks#ManagingOpenEdXTipsandTricks-UpdatingVersionsusingedXrepos)
 
 ## Overview 
@@ -21,7 +21,6 @@ Also usefull links:
 * Change name of platform
 * Change organization logo
 * Change urls like `localhost:8000` to `my-open-edx.com`
-* 
 
 ### Configuring SMTP server for sending mails
 [Look here](https://openedx.atlassian.net/wiki/display/OpenOPS/How+to+make+SMTP+work+in+your+Open+EdX+fullstack+instance).
@@ -127,3 +126,6 @@ sudo -u www-data /edx/bin/python.edxapp ./manage.py lms --settings aws shell
 * [Java grader](https://github.com/huynq55/java-grader)
 * [Stanford-online xqueue pool example](https://github.com/Stanford-Online/xqueue_pull_ref)
 
+# See also
+
+[Quick start](https://github.com/alikhil/edx-quick-start)
